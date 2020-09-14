@@ -37,3 +37,6 @@ function deleteItem(index) {
 function clearItemForm() {
     itemInput.value = '';
 }
+
+
+// code 2 is here
