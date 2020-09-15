@@ -40,3 +40,26 @@ function clearItemForm() {
 
 
 // code 2 is here
+//----------------- Section Two -----------------// 
+let audio = document.getElementById('mySound');
+function getRandomColor() {
+    var letters = '0123456789ABCDEF';
+    var color = '#';
+    for (var i = 0; i < 6; i++) {
+        color += letters[Math.floor(Math.random() * 16)];
+    }
+    return color;
+}
+$("#hustlin").mouseenter(function () {
+    let x = setInterval(() => {
+        $(".q2").css('background-color', getRandomColor);
+    }, 500);
+    audio.play();
+    $("#hustlin").mouseleave(() => {
+        clearInterval(x);
+        $(".q2").css('background-color', 'transparent');
+    })
+});
+$("#hustlin").mouseleave(function () {
+    audio.pause();
+});
