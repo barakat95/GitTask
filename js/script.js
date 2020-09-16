@@ -141,3 +141,27 @@ function testEmail(){
 
 }
 // end  code Q4
+
+// ------------------- Section 4 ---------------------//
+let red = $('.red');
+let green = $('.green');
+let blue = $('.blue');
+
+red.mouseenter(() => {
+    $('.q4').css('background-color', '#ff0000');
+})
+red.mouseleave(() => {
+    $('.q4').css('background-color', 'transparent');
+})
+green.mouseenter(() => {
+    $('.q4').css('background-color', '#00ff00');
+})
+green.mouseleave(() => {
+    $('.q4').css('background-color', 'transparent');
+})
+blue.mouseenter(() => {
+    $('.q4').css('background-color', '#0000ff');
+})
+blue.mouseleave(() => {
+    $('.q4').css('background-color', 'transparent');
+})
