@@ -100,3 +100,44 @@ var x = setInterval(function() {
   }
 }, 1000);
 /* End code of Q3 */
+//Code Q4
+
+let nameInput=document.getElementById("nameInput");
+let emailInput=document.getElementById("emailInput");
+let phoneInput=document.getElementById("phoneInput");
+let alertMassegeName=document.getElementById("alertMassegeName");
+let alertMassegeEmail=document.getElementById("alertMassegeEmail");
+let alertMassegeNumber=document.getElementById("alertMassegeNumber");
+nameInput.addEventListener("blur",testName);
+emailInput.addEventListener("blur",testEmail);
+phoneInput.addEventListener("blur",testNumber);
+function testName(){
+    var regex=/^[A-Z][a-z]{2,8}$/;
+    if(regex.test(nameInput.value)==true){
+        nameInput.classList.add(`is-valid`);
+        nameInput.classList.remove(`is-invalid`);
+        alertMassegeName.classList.replace(`d-block`,'d-none');
+    }
+    else{
+        nameInput.classList.add(`is-invalid`);
+        nameInput.classList.remove(`is-valid`);
+        alertMassegeName.classList.replace(`d-none`,'d-block');
+
+    } 
+}
+
+function testEmail(){
+    var regex=/^(\w{4,8})\s@gmail.com$/;
+    if(regex.test(  emailInput.value)==true){
+        emailInput.classList.add(`is-valid`);
+        emailInput.classList.remove(`is-invalid`);
+        alertMassegeEmail.classList.replace(`d-block`,'d-none');
+    }else{
+        emailInput.classList.add(`is-invalid`);
+        emailInput.classList.remove(`is-valid`);
+        alertMassegeEmail.classList.replace(`d-none`,'d-block');
+
+    } 
+
+}
+// end  code Q4
