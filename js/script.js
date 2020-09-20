@@ -100,7 +100,7 @@ var x = setInterval(function() {
   }
 }, 1000);
 /* End code of Q3 */
-//Code Q4
+//Code Q5
 
 let nameInput=document.getElementById("nameInput");
 let emailInput=document.getElementById("emailInput");
